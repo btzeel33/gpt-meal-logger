@@ -1,8 +1,7 @@
 
 { pkgs }: {
   deps = [
-    pkgs.python310Full
-    pkgs.replitPackages.prybar-python310
-    pkgs.replitPackages.stderred
+    pkgs.python311Full
+    pkgs.python311Packages.flask
   ];
 }
