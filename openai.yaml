@@ -1,15 +1,13 @@
 
-openapi: 3.0.0
+openapi: 3.1.0
 info:
-  title: GPT Meal Logger API
-  version: 1.0.0
-servers:
-  - url: https://gpt-meal-logger.onrender.com
+  title: Meal Logger
+  version: '1.0'
 paths:
   /log:
     post:
       operationId: logMeal
-      summary: Log a user's meal
+      summary: Logs a meal entry
       requestBody:
         required: true
         content:
@@ -19,16 +17,16 @@ paths:
               properties:
                 meal:
                   type: string
-                  description: A description of what the user ate
+                  description: The meal to log
               required:
                 - meal
       responses:
         '200':
-          description: Confirmation that the meal was logged
+          description: Success
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  status:
+                  message:
                     type: string
