@@ -16,3 +16,6 @@ def log_meal():
     meal = data.get("meal")
     print(f"Meal logged: {meal}")
     return jsonify({"message": f"Logged: {meal}"})
+
+if __name__ == "__main__":
+app.run(host="0.0.0.0", port=10000)
